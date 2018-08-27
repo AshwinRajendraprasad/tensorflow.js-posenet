@@ -31,7 +31,8 @@ var vendorJs = [
 // Add my project js below
 var appJs = [
   './src/js/signature.js',
-  './scr/js/config.js'
+  './scr/js/config.js',
+  './src/js/main.js'
 ];
 
 var pimcoreStatic = '../htdocs/website/static/';

@@ -1,8 +1,4 @@
-# What is it?
-
-A bootstrap 4 temmplate project to use gulp auto build front-end code.
-It works with Design Quest's Pimcore project structure.
-Created by michael@designquest.com.hk
+# TensorflowJS posenet study project
 
 ## Install
     npm install
