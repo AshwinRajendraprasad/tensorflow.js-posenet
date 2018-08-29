@@ -9,6 +9,8 @@
     canvas.height = input.height;
     var ctx = canvas.getContext('2d');
     ctx.strokeStyle = "#FFF";
+    var eye = new Image();    
+    eye.src = 'website/static/assets/images/eye.png';
 
     var drawLink = function(keypoint1, keypoint2) {
         ctx.beginPath();
@@ -22,15 +24,17 @@
             flipHorizontal, outputStride)
     }).then(function (pose) {
         console.log('estimateSinglePose', pose);
-
         // Draw keypoint
-        for (var i = 0; i < pose.keypoints.length; i++) {
-            ctx.beginPath();
-            ctx.arc(pose.keypoints[i].position.x, pose.keypoints[i].position.y, 2,
-                0, 2 * Math.PI);
-            ctx.stroke();
-        }
-        
+        // for (var i = 0; i < pose.keypoints.length; i++) {
+        //     ctx.beginPath();
+        //     ctx.arc(pose.keypoints[i].position.x, pose.keypoints[i].position.y, 2,
+        //         0, 2 * Math.PI);
+        //     ctx.stroke();
+        // }
+        // eye.onload = function() {
+            ctx.drawImage(eye, pose.keypoints[1].position.x-7, pose.keypoints[1].position.y-10);
+            ctx.drawImage(eye, pose.keypoints[2].position.x-7, pose.keypoints[2].position.y-10);
+        // };
 
         // Draw links
         drawLink(pose.keypoints[9], pose.keypoints[7]);
