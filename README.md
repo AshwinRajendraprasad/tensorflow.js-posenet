@@ -1,5 +1,9 @@
 # TensorflowJS posenet study project
 It is my study project of TensorflowJS posenet.<br>
+
+![TensorflowJS posenet sample](https://designquest.com.hk/demo/tensorflow-posenet/readme/sample1.png)
+
+
 Demo page: https://designquest.com.hk/demo/tensorflow-posenet/<br>
 Source: https://github.com/tensorflow/tfjs-models/tree/master/posenet
 
