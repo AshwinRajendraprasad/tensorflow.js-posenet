@@ -31,7 +31,9 @@ var vendorJs = [
 var appJs = [
   './src/js/signature.js',
   './src/js/single-pose.js',
-  './src/js/multiple-poses.js'
+  './src/js/multiple-poses.js',
+  './src/js/video-multiple-poses.js',
+  './src/js/video-single-pose.js'
 ];
 
 var pimcoreStatic = '../htdocs/website/static/';
