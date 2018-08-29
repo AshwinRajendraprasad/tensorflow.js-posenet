@@ -12,14 +12,14 @@ ctx.strokeStyle = "#FFF";
 
 var drawLink = function(keypoint1, keypoint2) {
     // console.log(keypoint1.score, keypoint2.score);
-    if (keypoint1.score > minPartConfidence && keypoint2.score > minPartConfidence) {
+    //if (keypoint1.score > minPartConfidence && keypoint2.score > minPartConfidence) {
         ctx.beginPath();
         ctx.moveTo(keypoint1.position.x, keypoint1.position.y);
         ctx.lineTo(keypoint2.position.x, keypoint2.position.y);
         ctx.stroke();
-    } else {
-        console.log("skiped", keypoint1, "to", keypoint2);
-    }
+    // } else {
+    //     console.log("skiped", keypoint1, "to", keypoint2);
+    // }
 }
 
 posenet.load().then(function (net) {
