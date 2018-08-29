@@ -25,14 +25,13 @@ var vendorJs = [
   './node_modules/jquery/dist/jquery.min.js',
   './node_modules/popper.js/dist/umd/popper.min.js',
   './node_modules/bootstrap/dist/js/bootstrap.min.js',
-  
 ];
 
 // Add my project js below
 var appJs = [
   './src/js/signature.js',
-  './scr/js/config.js',
-  './src/js/main.js'
+  './src/js/single-pose.js',
+  './src/js/multiple-poses.js'
 ];
 
 var pimcoreStatic = '../htdocs/website/static/';
