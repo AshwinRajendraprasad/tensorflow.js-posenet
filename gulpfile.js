@@ -37,10 +37,6 @@ var appJs = [
 
 var pimcoreStatic = '../htdocs/website/static/';
 
-function getTaskName(self) {
-  return self.seq.slice(-1)[0];
-}
-
 // Starts a BrowerSync instance
 gulp.task('server', ['build'], function () {
   browser.init({ server: './build', port: port });
@@ -58,9 +54,7 @@ gulp.task('watch', function () {
 // Erases the build folder
 gulp.task('clean', function () {
   rimraf('./build');
-  // if (getTaskName(this) == 'build') {
-  //   rimraf(pimcoreStatic); // watch directory
-  // }
+  
 });
 
 // Copy assets
@@ -70,10 +64,6 @@ gulp.task('copy', function () {
   gulp.src(['./node_modules/bootstrap/dist/css/*.css'])
     .pipe(gulp.dest('./build/website/static/css'));
 
-  // When 'build' task, copy assets to pimcore directorty
-  if (getTaskName(this) == 'build') {
-    gulp.src(['./src/assets/**/*']).pipe(gulp.dest(pimcoreStatic+'/assets'));
-  }
 });
 
 var sassOptions = {
@@ -100,10 +90,6 @@ gulp.task('compile-sass', function () {
       ]
     })
   ];
-  // Only 'build' task will minify the css
-  if (getTaskName(this) == 'build') {
-    processors.push(cssnano());
-  }
   return gulp.src('./src/scss/app.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
