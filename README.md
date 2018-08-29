@@ -2,6 +2,9 @@
 It is my study project of TensorflowJS posenet.
 https://github.com/tensorflow/tfjs-models/tree/master/posenet
 
+## Note
+1. Try to load video from other server, but estimateMultiplePoses not work. Fund out the video must save in same server.
+2. Adjust scoreThreshold to 0.7. The skeletons in video output became much stable.
 
 ## Install
     npm install

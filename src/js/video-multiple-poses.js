@@ -1,9 +1,9 @@
 (function(){
-    var imageScaleFactor = 1;
-    var outputStride = 16;
+    var imageScaleFactor = 0.8;
+    var outputStride = 8;
     var flipHorizontal = false;
     var maxPoseDetections = 3;
-    var scoreThreshold = 0.4;
+    var scoreThreshold = 0.7;
     var net;
 
     var video = document.getElementById('VideoMultiplePoses');
@@ -32,10 +32,11 @@
                         // Draw keypoint
                         for (var i = 0; i < pose.keypoints.length; i++) {
                             ctx.beginPath();
-                            ctx.arc(pose.keypoints[i].position.x, pose.keypoints[i].position.y, 2,
-                                0, 2 * Math.PI);
+                            ctx.arc(pose.keypoints[i].position.x, pose.keypoints[i].position.y, 2, 0, 6.283185307179586);
                             ctx.stroke();
                         }
+                        
+
                         // Draw links
                         drawLink(pose.keypoints[9], pose.keypoints[7]);
                         drawLink(pose.keypoints[7], pose.keypoints[5]);

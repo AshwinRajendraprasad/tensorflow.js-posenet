@@ -30,6 +30,7 @@
                 0, 2 * Math.PI);
             ctx.stroke();
         }
+        
 
         // Draw links
         drawLink(pose.keypoints[9], pose.keypoints[7]);
